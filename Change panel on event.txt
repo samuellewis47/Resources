@@ -1,0 +1,4 @@
+mainPanel.removeAll();
+mainPanel.add(jPanel1);
+mainPanel.repaint();
+mainPanel.revalidate(); 

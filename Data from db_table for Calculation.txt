@@ -1,0 +1,29 @@
+con = dbcon.getDbConnection();
+Statement stmt=con.createStatement();
+ResultSet rs=stmt.executeQuery("select Year, Sales_Value from detail_peg_cl_movingaverage");
+           
+            int sales_year[] = new int[6];		//Number of rows in sales_year is 6 
+            int sales_value[] = new int[6];		//Number of rows in sales_value is 6 
+            int i = 0;
+            int value=0;
+            int year=0;
+            
+            while(rs.next()) 
+	{
+            		year=rs.getInt(1);
+            		value=rs.getInt(2);
+            		sales_year[i]=year;
+            		sales_value[i]=value;
+            		i++;
+            
+           		 // System.out.println("Year: "+year);
+            		 // System.out.println("Value: "+value);
+         	} 
+            
+            System.out.println("peg_table: " +sales_value[0]);
+            System.out.println("peg_table: " +sales_value[1]);
+            System.out.println("peg_table: " +sales_value[2]);
+            System.out.println("peg_table: " +sales_value[3]);
+            System.out.println("peg_table: " +sales_value[4]);
+           
+            // System.out.println("peg_table: " +sales_value[5]); - No Value in the Last Array
