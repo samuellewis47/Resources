@@ -1,0 +1,22 @@
+FileFilter filter = new FileNameExtensionFilter("JPEG file", "jpg", "jpeg");
+        fc_copy_birthcert.setFileFilter(filter);
+        int response = fc_copy_birthcert.showOpenDialog((Component)evt.getSource());
+        try
+            {
+                if (response == JFileChooser.APPROVE_OPTION) 
+                {
+                    String pathName = fc_copy_birthcert.getSelectedFile().getPath();
+                    JOptionPane.showMessageDialog(null, pathName);
+                    ImageIcon icon = new ImageIcon(pathName);
+              //    details_copy_birthcert.setIcon(icon);     Can be used to setup Icon on Label
+                    details_copy_birthcert.setText(pathName);
+                }        
+                else 
+                {
+                        JOptionPane.showMessageDialog(null, "Feel Free to Look Later");
+                }
+            }
+        catch (Exception e) 
+            {
+                e.printStackTrace();
+            } 
