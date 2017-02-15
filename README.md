@@ -1,3 +1,3 @@
 # Resources
 
-This repository contains snippet of important reusable code.
+This repository contains snippet of important reusable code for Java.
