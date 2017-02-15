@@ -1,3 +1,5 @@
+import javax.swing.table.DefaultTableModel;
+
 con = dbcon.getDbConnection();
 Statement stmt=con.createStatement();
 ResultSet rs=stmt.executeQuery("SELECT * FROM table_name");
@@ -15,14 +17,14 @@ Vector data_rows = new Vector();
                		columns_name.addElement(rsmetadata.getColumnName(j));
             	}
 
-            dtm.setColumnIdentifiers(columns_name);
+            dtm.setColumnIdentifiers(columns_name);	
             
             while(rs.next()) 
 	{
                 	data_rows = new Vector();
                 	for(int k=1; k<3; k++)
                 		{
-                    			data_rows.addElement(rs.getInt(k));
+                    			data_rows.addElement(rs.getObject(k));
                 		}
                 	dtm.addRow(data_rows);
             	}
