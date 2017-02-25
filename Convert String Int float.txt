@@ -1,0 +1,7 @@
+int geometryoutof = Integer.parseInt(txt_geomsr_outof.getText());		// convert from String to Int
+
+txt_total1sr_marks.setText(Integer.toString(total1));			// convert from Int to String
+
+float grandtotal = Float.parseFloat(txt_total1sr_marks.getText()); 		// convert from String to Float
+
+txt_percentsr.setText(Float.toString(Percentage)+"%");			// convert from Float to String
