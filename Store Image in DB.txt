@@ -1,0 +1,39 @@
+try
+                    {  
+                        DbConnector dbc = new DbConnector();
+                        try (Connection con23 = dbc.dbcon())
+                        {
+                            PreparedStatement ps=con23.prepareStatement("INSERT INTO test.image(image1) VALUES(?)");
+                            FileInputStream fin=new FileInputStream(pathName_stdphoto);
+                            ps.setBinaryStream(1,fin,fin.available());
+                            int i=ps.executeUpdate();
+                            System.out.println(i+" records affected");
+                        }  
+                    }
+                    catch (IOException | SQLException e) 
+                    {
+                        e.printStackTrace();
+                    }
+
+import dsms.utility.DbConnector;
+import java.sql.*;  
+import java.io.*;  
+
+public class InsertImage {  
+public static void main(String[] args) {  
+try{  
+            DbConnector dbc = new DbConnector();
+            Connection con= dbc.dbcon();
+            Statement st=con.createStatement();
+              
+PreparedStatement ps=con.prepareStatement("INSERT INTO test.image(image1) VALUES(?)");  
+
+FileInputStream fin=new FileInputStream("D:\\0A - Backup 47\\1A - Work Files\\1A - Dump\\size_chnaged_image.jpg");  
+ps.setBinaryStream(1,fin,fin.available());  
+int i=ps.executeUpdate();  
+System.out.println(i+" records affected");  
+          
+con.close();  
+}catch (IOException | SQLException e) {e.printStackTrace();}  
+}  
+}  
