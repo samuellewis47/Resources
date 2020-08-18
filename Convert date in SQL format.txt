@@ -1,3 +1,0 @@
-Date form4_date_admission_long    =   dpDate_admitted.getDate();         //Getting the date
-DateFormat oDateFormat2 = new SimpleDateFormat("yyyy-MM-dd");            //Converting the date
-form4_date_admission = oDateFormat2.format(form4_date_admission_long);   //Storing the date
