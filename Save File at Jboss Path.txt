@@ -6,6 +6,8 @@ Also Save Attachments Path with Comma in Database
 Use MultipartFile in DTO and Same Name attribute to get Multiple Attachments
 from View and Bind to MultipartFile of DTO
 
+MultipartFile is from org.springframework.web.multipart
+
 **/
 
 File directory = new File(".");
