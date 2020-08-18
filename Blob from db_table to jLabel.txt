@@ -1,5 +1,0 @@
-Blob imageBlob = rs2.getBlob(1);
-byte[] imageBytes = imageBlob.getBytes(1, (int) imageBlob.length());
-
-school_logo.setIcon(new ImageIcon(imageBytes)); 	// school_logo = jLabel
-Image image2 = Image.getInstance(imageBytes);		// This is to add in iText Image
