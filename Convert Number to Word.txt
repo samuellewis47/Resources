@@ -1,32 +1,26 @@
-import static dsms.model.ConvertNumberWord.convert; 		//returns convert(int);
-
-import dsms.model.ConvertNumberWord;			//Passing Value
-ConvertNumberWord cnw = new ConvertNumberWord();
- cnw.convert(int);
-
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package dsms.model;
-
-import java.text.*;
 /**
- *
- * @author admin
- */
-public class ConvertNumberWord
+
+Utility Class to make Amount in Numbers to Words.
+
+Maximum Input: 2147483647 (Integer.MAX_VALUE)
+Maximum Output: two billion one hundred forty seven million four hundred eighty three thousand six hundred forty seven
+
+**/
+
+public class NumberInWords
 {
     
-    public static final String[] units = {
+	private NumberInWords() {
+		throw new IllegalStateException("Utility Class");
+	}
+	
+    static final String[] units = {
             "", "one", "two", "three", "four", "five", "six", "seven",
             "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen",
             "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
     };
 
-    public static final String[] tens = {
+    static final String[] tens = {
             "",        // 0
             "",        // 1
             "twenty",  // 2
@@ -39,8 +33,7 @@ public class ConvertNumberWord
             "ninety"   // 9
     };
     
-    public static String convert(final int n)
-    {
+    public static String convert(final int n) {
     
         if (n < 0) {
             return "minus " + convert(-n);
@@ -67,7 +60,5 @@ public class ConvertNumberWord
         }
 
         return convert(n / 1000000000) + " billion"  + ((n % 1000000000 != 0) ? " " : "") + convert(n % 1000000000);
-        
     }
- 
 }
