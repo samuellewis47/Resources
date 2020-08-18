@@ -1,6 +1,6 @@
 /**
 
-Get Jboss Path and Save Multiple Attachments in App Server folder of Jboss
+Get Jboss Path and Save Multiple Attachments or Files in App Server folder of Jboss
 Also Save Attachments Path with Comma in Database
 
 Use MultipartFile in DTO and Same Name attribute to get Multiple Attachments
