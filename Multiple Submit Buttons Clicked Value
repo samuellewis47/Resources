@@ -1,0 +1,19 @@
+ /**
+
+When there are multiple Submit Buttons in a Form.
+Get Value of the Submit Button that has been Clicked Manually
+
+**/
+
+function validateForm(){
+    var submitValue = document.activeElement.value;
+    alert(submitValue);
+}
+
+<form:form method="POST" action="./submit" modelAttribute="submitFormDTO" enctype="multipart/form-data" onsubmit="return validateForm()">
+
+<button type="submit" name="doAction" value="Search">Search</button>
+
+<button type="submit" name="doAction" value="Save">Save</button>
+
+<button type="submit" name="doAction" value="Submit">Submit</button>
