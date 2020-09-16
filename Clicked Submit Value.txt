@@ -1,7 +1,8 @@
  /**
 
+- Javascript Code -
 When there are multiple Submit Buttons in a Form.
-Get Value of the Submit Button that has been Clicked Manually
+Get Value of the Submit Button that has been Clicked Manually.
 
 **/
 
