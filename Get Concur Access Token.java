@@ -1,3 +1,11 @@
+/**
+
+- Java Code -
+Get Concur Access Token using below code.
+Minimum Java v1.8 required for support of TLS v1.2
+
+**/
+
 public static String getConcurAccessToken(Propeties propeties) {
 			
 	try{
